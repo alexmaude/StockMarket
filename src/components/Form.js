@@ -17,11 +17,16 @@ export class Form extends React.Component {
             date: new Date(),
         }
 
-        this.handleChange = this.handleChange.bind(this);
+        this.symbolChange = this.symbolChange.bind(this);
+        this.dateChange = this.dateChange.bind(this);
     }
 
-    handleChange(event) {
+    symbolChange(event) {
         this.setState({symbol: event.target.value});
+    }
+
+    dateChange(date) {
+        this.setState({date: date});
     }
 
     render() {
@@ -34,7 +39,7 @@ export class Form extends React.Component {
                         </label>
                     </View>
                     <View style={{flex: 1}}>
-                        <input className="myInput" type="text" value={this.state.symbol} onChange={this.handleChange}/>
+                        <input className="myInput" type="text" value={this.state.symbol} onChange={this.symbolChange}/>
                     </View>
                 </View>
                 <View style={{flexDirection:'row'}}>
@@ -54,7 +59,7 @@ export class Form extends React.Component {
                         </label>
                     </View>
                     <View style={{flex: 1}}>
-                        <DatePicker className="myInput"  placeholder="..." selected={this.state.date}/>
+                        <DatePicker className="myInput"  placeholder="..." selected={this.state.date} onChange={this.dateChange}/>
                     </View>
                 </View>
                 <button className="myButton"> Get Recommendations</button>
