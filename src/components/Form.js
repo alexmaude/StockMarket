@@ -12,7 +12,7 @@ export class Form extends React.Component {
 
     render() {
         return (
-            <View>
+            <View style={{padding:'20px'}}>
                 <View style={{flexDirection:'row'}}>
                     <View style={{flex: 1}}>
                         <label>
@@ -20,7 +20,7 @@ export class Form extends React.Component {
                         </label>
                     </View>
                     <View style={{flex: 1}}>
-                        <input className="myInput" type="text" name="symbol"/>
+                        <input className="myInput" type="text" name="symbol" placeholder="."/>
                     </View>
                 </View>
                 <View style={{flexDirection:'row'}}>
@@ -30,7 +30,7 @@ export class Form extends React.Component {
                         </label>
                     </View>
                     <View style={{flex: 1}}>
-                        <Dropdown className="myInput" options={socialMedias}/>
+                        <Dropdown className="myInput" options={socialMedias} placeholder="."/>
                     </View>
                 </View>
                 <View style={{flexDirection:'row'}}>
@@ -40,7 +40,7 @@ export class Form extends React.Component {
                         </label>
                     </View>
                     <View style={{flex: 1}}>
-                        <DatePicker className="myInput" />
+                        <DatePicker className="myInput"  placeholder="..."/>
                     </View>
                 </View>
                 <button className="myButton"> Get Recommendations</button>
