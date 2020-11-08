@@ -4,6 +4,7 @@ import { Form } from './Form';
 import { Indicator } from './Indicator';
 import { getStockChances, stockPriceGenerator} from './StockCalculator';
 import chartlogo from '../assets/linechart.png';
+import "react-datepicker/dist/react-datepicker.css";
 import network from '../assets/network.png';
 import dollar from '../assets/dollar.png';
 
