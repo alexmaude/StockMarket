@@ -9,6 +9,20 @@ const socialMedias = [
 ]
 
 export class Form extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            symbol: '',
+            social: '',
+            date: new Date(),
+        }
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({symbol: event.target.value});
+    }
 
     render() {
         return (
@@ -20,7 +34,7 @@ export class Form extends React.Component {
                         </label>
                     </View>
                     <View style={{flex: 1}}>
-                        <input className="myInput" type="text" name="symbol" placeholder="."/>
+                        <input className="myInput" type="text" value={this.state.symbol} onChange={this.handleChange}/>
                     </View>
                 </View>
                 <View style={{flexDirection:'row'}}>
@@ -30,7 +44,7 @@ export class Form extends React.Component {
                         </label>
                     </View>
                     <View style={{flex: 1}}>
-                        <Dropdown className="myInput" options={socialMedias} placeholder="."/>
+                        <Dropdown className="myInput" value={this.state.social} options={socialMedias} placeholder="." />
                     </View>
                 </View>
                 <View style={{flexDirection:'row'}}>
@@ -40,7 +54,7 @@ export class Form extends React.Component {
                         </label>
                     </View>
                     <View style={{flex: 1}}>
-                        <DatePicker className="myInput"  placeholder="..."/>
+                        <DatePicker className="myInput"  placeholder="..." selected={this.state.date}/>
                     </View>
                 </View>
                 <button className="myButton"> Get Recommendations</button>
