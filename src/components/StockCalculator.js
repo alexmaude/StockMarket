@@ -1,12 +1,9 @@
 /**
- * Calculate stock recommendations
- */
-/**
  * Get stock recommendation (0 to 100) based on social media
  * @param symbol : Stock symbol
  * @param social : Social media
  * @param date : Selected day
- * @returns recommendation (0 to 100)
+ * @returns count, price and percentage
  */
     export function getStockChances(symbol, social, date) {
         var count = socialMediaCountGenerator(symbol, social);
