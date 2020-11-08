@@ -11,11 +11,20 @@ export class Indicator extends React.Component {
         return (
             <div>
                 <ProgressBar percentage={this.state.percentage} />
-                <View style={{flexDirection:'row', padding:'10px'}}>
-                    <label> Sell </label>
-                    <label> Hold </label>
-                    <label> Buy </label>
-                </View>
+                <View style={{ flex: 1,
+                    justifyContent: 'space-between',
+                    flexDirection:'row',
+                    padding:'10px'}}>
+                        <View style={{width: 50}}>
+                            <label> Sell </label>
+                        </View>
+                        <View style={{width: 50}}>
+                            <label> Hold </label>
+                        </View>
+                        <View style={{width: 50}}>
+                            <label> Buy </label>
+                        </View>
+                    </View>
             </div>
         )
     }

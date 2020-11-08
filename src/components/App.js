@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
         <View style={styles.container} flexDirection="column">
-            <View style={{flex: 1}}>
+            <View style={{flex: 2}}>
               <header className="App-header">
                 <img src={chartlogo} className="App-logo" alt="logo" />
                 <p>
@@ -19,15 +19,15 @@ function App() {
                 </p>
               </header>
             </View>
-            <View style={{flex: 2}}>
+            <View style={{flex: 3}}>
                 <Form />
             </View>
-            <View style={{flex: 3}}>
+            <View style={{flex: 2}}>
                 <Indicator/>
-                <p>
-                    Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-                </p>
             </View>
+            <p className={"info"}>
+                Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+            </p>
         </View>
     </div>
   );
@@ -35,7 +35,8 @@ function App() {
 
 const styles = {
     container: {
-        flex: 1
+        flex: 1,
+        height: '100vh'
     }
 }
 
