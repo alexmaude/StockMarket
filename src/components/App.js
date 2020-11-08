@@ -1,8 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import {Form} from './Form';
-import Dropdown from 'react-dropdown';
-import DatePicker from 'react-datepicker';
+import {Indicator} from './Indicator';
 import chartlogo from '../assets/linechart.png';
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -24,6 +23,7 @@ function App() {
                 <Form />
             </View>
             <View style={{flex: 3}}>
+                <Indicator/>
                 <p>
                     Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
                 </p>
