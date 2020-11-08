@@ -75,7 +75,7 @@ export class Form extends React.Component {
                         <DatePicker className="myInput"  placeholder="..." selected={this.state.date} onChange={this.dateChange}/>
                     </View>
                 </View>
-                <button className="myButton" onClick={this.submitHandler}> Get Recommendations</button>
+                <button className="myButton" onClick={this.submitHandler}>Calculate</button>
             </View>
         )
     }

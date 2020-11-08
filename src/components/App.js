@@ -1,10 +1,11 @@
 import React from 'react';
 import { View } from 'react-native';
-import {Form} from './Form';
-import {Indicator} from './Indicator';
-import {getStockChances, stockPriceGenerator} from './StockCalculator';
+import { Form } from './Form';
+import { Indicator } from './Indicator';
+import { getStockChances, stockPriceGenerator} from './StockCalculator';
 import chartlogo from '../assets/linechart.png';
-import "react-datepicker/dist/react-datepicker.css";
+import network from '../assets/network.png';
+import dollar from '../assets/dollar.png';
 
 import '../App.css';
 
@@ -12,9 +13,9 @@ export class App extends React.Component  {
     constructor(props){
         super(props);
         this.state = {
-            percentage: '',
-            price: '',
-            count: ''
+            percentage: '0',
+            price: '0',
+            count: '0'
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -41,8 +42,14 @@ export class App extends React.Component  {
                         <Form onSubmit={this.handleSubmit}/>
                     </View>
                     <View style={{flex: 3}}>
-                        <label className={"bigLabel"}> {"Stock Price : " + this.state.price} </label>
-                        <label className={"bigLabel"}> {"Social media posts : " + this.state.count} </label>
+                        <label className={"price"}>
+                            <img src={dollar} className="valuesLogos" alt="logo"/>
+                            {this.state.price}
+                        </label>
+                        <label className={"price"}>
+                            <img src={network} className="valuesLogos" alt="logo"/>
+                            {this.state.count}
+                        </label>
                         <Indicator value={this.state.percentage}/>
                     </View>
                     <p className={"info"}>

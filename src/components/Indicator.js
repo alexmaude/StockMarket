@@ -14,7 +14,7 @@ export class Indicator extends React.Component {
                 <View style={{ flex: 1,
                     justifyContent: 'space-between',
                     flexDirection:'row',
-                    padding:'10px'}}>
+                    padding:'2px'}}>
                         <View style={{width: 50}}>
                             <label> Sell </label>
                         </View>
