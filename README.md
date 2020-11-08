@@ -1,5 +1,8 @@
 # Stock Market Recommendation App
-React App that gives a sell, hold or buy recommendation based on social media posts
+App built with React that gives a sell, hold or buy recommendation based on social media posts
+App should be run on phone 
+
+![alt text](./Capture.png)
 
 ## Get Started
 
