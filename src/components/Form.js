@@ -1,9 +1,9 @@
 import React from 'react';
 import Dropdown from 'react-dropdown';
 import '../App.css';
-import {View} from "react-native";
+import { View } from "react-native";
 import DatePicker from "react-datepicker";
-
+import moment from "moment";
 const socialMedias = [
     'Twitter', 'Facebook', 'LinkedIn'
 ]
@@ -22,8 +22,11 @@ export class Form extends React.Component {
         this.state = {
             symbol: '',
             social: '',
-            date: new Date(),
+            date: new Date()
         }
+
+        // TODO : set default date to now - 10 days
+        //this.setState({date: moment(new Date()).subtract(10, 'days').format("MM/DD/YYYY")});
 
         this.symbolChange = this.symbolChange.bind(this);
         this.dateChange = this.dateChange.bind(this);

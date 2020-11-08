@@ -22,6 +22,7 @@
  * @returns number : price
  */
     export function stockPriceGenerator(symbol, date) {
+        // TODO: Get stock price from API
         return Math.round((Math.random() * 100)*100)/100;
     }
 
@@ -32,6 +33,7 @@
  * @returns number : count
  */
     export function socialMediaCountGenerator(symbol, social) {
+        // TODO: Get social media count form API
         return Math.round((Math.random() * 100)*1)/1;
     }
 
@@ -45,6 +47,7 @@
         // Where the magic happens!
         // This is where algorithm that outputs a 0 to 100 recommendation
         // based on a count of social media posts happens
+        // TODO : replace by a real algorithm
         if(price > 100 && count > 100)
         {
             return 100;
