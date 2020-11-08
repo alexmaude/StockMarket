@@ -2,15 +2,15 @@ import React from 'react';
 import '../App.css';
 import {View} from "react-native-web";
 
-
+/**
+ * Sell/Hold/Buy range indicator using percentage
+ */
 export class Indicator extends React.Component {
     render() {
-        this.state = {
-            percentage: 50
-        }
+
         return (
             <div>
-                <ProgressBar percentage={this.state.percentage} />
+                <ProgressBar percentage={this.props.value} />
                 <View style={{ flex: 1,
                     justifyContent: 'space-between',
                     flexDirection:'row',

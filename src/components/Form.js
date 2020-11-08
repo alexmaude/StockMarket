@@ -8,9 +8,17 @@ const socialMedias = [
     'Twitter', 'Facebook', 'LinkedIn'
 ]
 
+/**
+ * Form with 3 fields and a submit button
+ * stock symbol, social media and date
+ */
 export class Form extends React.Component {
     constructor(props) {
         super(props);
+        /**
+         * Form values
+         * @type {{date: Date, symbol: string, social: string}}
+         */
         this.state = {
             symbol: '',
             social: '',
@@ -19,6 +27,11 @@ export class Form extends React.Component {
 
         this.symbolChange = this.symbolChange.bind(this);
         this.dateChange = this.dateChange.bind(this);
+        this.submitHandler = this.submitHandler.bind(this);
+    }
+
+    submitHandler() {
+        this.props.onSubmit(this.state);
     }
 
     symbolChange(event) {
@@ -62,7 +75,7 @@ export class Form extends React.Component {
                         <DatePicker className="myInput"  placeholder="..." selected={this.state.date} onChange={this.dateChange}/>
                     </View>
                 </View>
-                <button className="myButton"> Get Recommendations</button>
+                <button className="myButton" onClick={this.submitHandler}> Get Recommendations</button>
             </View>
         )
     }
