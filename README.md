@@ -2,7 +2,7 @@
 App built with React that gives a sell, hold or buy recommendation based on social media posts
 App should be run on phone 
 
-![alt text](./Capture.png)
+![alt text](Capture.jpg)
 
 ## Get Started
 
