@@ -8,11 +8,6 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import '../App.css';
 
-const socialMedias = [
-    'Twitter', 'Facebook', 'LinkedIn'
-]
-const defaultSocialMedia = socialMedias[0];
-
 function App() {
   return (
     <div className="App">
@@ -26,37 +21,7 @@ function App() {
               </header>
             </View>
             <View style={{flex: 2}}>
-                <View style={{flexDirection:'row'}}>
-                    <View style={{flex: 1}}>
-                        <label>
-                            Stock Symbol
-                        </label>
-                    </View>
-                    <View style={{flex: 1}}>
-                        <input className="myInput" type="text" name="symbol"/>
-                    </View>
-                </View>
-                <View style={{flexDirection:'row'}}>
-                    <View style={{flex: 1}}>
-                        <label>
-                            Social Media
-                        </label>
-                    </View>
-                    <View style={{flex: 1}}>
-                        <Dropdown className="myInput" options={socialMedias}/>
-                    </View>
-                </View>
-                <View style={{flexDirection:'row'}}>
-                    <View style={{flex: 1}}>
-                        <label>
-                            Date
-                        </label>
-                    </View>
-                    <View style={{flex: 1}}>
-                        <DatePicker className="myInput" />
-                    </View>
-                </View>
-                <button className="myButton"> Get Recommendations</button>
+                <Form />
             </View>
             <View style={{flex: 3}}>
                 <p>
